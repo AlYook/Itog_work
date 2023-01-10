@@ -15,6 +15,7 @@ CreateArray(array);
 Console.WriteLine();
 PrintArray(array);
 Console.WriteLine();
+ExamArray(array);
 
 void CreateArray(string[] array)
 {
@@ -29,7 +30,20 @@ void PrintArray(string[] inArray)
     Console.Write("Введенный масив: [");
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
-        Console.Write($"{inArray [i]}, ");
+        Console.Write($"{inArray[i]}, ");
     }
-     Console.Write("]");
+    Console.Write("]");
+}
+
+void ExamArray(string[] array)
+{
+    Console.Write("Новый масив: [");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            Console.Write($"{array[i]} ,");
+        }
+    }
+    Console.Write("]");
 }
